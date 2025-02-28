@@ -30,7 +30,7 @@ services:
       - ./redisdata:/data
 
   # No ports need to be exposed; the VSCode DevContainer plugin manages them.
-  paperless-development:
+  natural-stupidity-dev:
     image: paperless-ngx
     build:
       context: ../    # Dockerfile cannot access files from parent directories if context is not set.

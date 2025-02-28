@@ -217,6 +217,9 @@
 				"Start: Celery Worker",
 				"Start: Consumer Service (manage.py document_consumer)",
 				"Start: Backend Server (manage.py runserver)"
+			],
+			"problemMatcher": [
+				"$python"
 			]
 		}
 	]
