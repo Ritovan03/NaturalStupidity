@@ -5,8 +5,6 @@ name = "pypi"
 
 [packages]
 dateparser = "~=1.2"
-# WARNING: django does not use semver.
-#          Only patch versions are guaranteed to not introduce breaking changes.
 django = "~=5.1.5"
 django-allauth = {extras = ["mfa", "socialaccount"], version = "*"}
 django-auditlog = "*"
@@ -55,20 +53,16 @@ scikit-learn = "~=1.6"
 setproctitle = "*"
 tika-client = "*"
 tqdm = "*"
-# See https://github.com/paperless-ngx/paperless-ngx/issues/5494
 uvicorn = {extras = ["standard"], version = "==0.25.0"}
 watchdog = "~=6.0"
-whitenoise = "~=6.9"
 whoosh = "~=2.7"
 zxing-cpp = "*"
-
+whitenoise = "*"
 
 [dev-packages]
-# Linting
 pre-commit = "*"
 ruff = "*"
 factory-boy = "*"
-# Testing
 pytest = "*"
 pytest-cov = "*"
 pytest-django = "*"
@@ -80,7 +74,6 @@ pytest-mock = "*"
 pytest-rerunfailures = "*"
 imagehash = "*"
 daphne = "*"
-# Documentation
 mkdocs-material = "*"
 mkdocs-glightbox = "*"
 
