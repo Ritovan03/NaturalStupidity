@@ -40,17 +40,17 @@ services:
       - gotenberg
       - tika
     volumes:
-      - ..:/usr/src/paperless/paperless-ngx:delegated
+      - ..:/usr/src/paperless:delegated
       - ../.devcontainer/vscode:/usr/src/paperless/.vscode:delegated # VSCode config files
-      - pipenv:/usr/src/paperless/paperless-ngx/.venv
-      - /usr/src/paperless/paperless-ngx/src/documents/static/frontend # Static frontend files exist only in container
-      - /usr/src/paperless/paperless-ngx/src/.pytest_cache
-      - /usr/src/paperless/paperless-ngx/.ruff_cache
-      - /usr/src/paperless/paperless-ngx/htmlcov
-      - /usr/src/paperless/paperless-ngx/.coverage
-      - ./data:/usr/src/paperless/paperless-ngx/data
-      - ./media:/usr/src/paperless/paperless-ngx/media
-      - ./consume:/usr/src/paperless/paperless-ngx/consume
+      - pipenv:/usr/src/paperless/.venv
+      - /usr/src/paperless/src/documents/static/frontend # Static frontend files exist only in container
+      - /usr/src/paperless/src/.pytest_cache
+      - /usr/src/paperless/.ruff_cache
+      - /usr/src/paperless/htmlcov
+      - /usr/src/paperless/.coverage
+      - ./data:/usr/src/paperless/data
+      - ./media:/usr/src/paperless/media
+      - ./consume:/usr/src/paperless/consume
       - ~/.gitconfig:/usr/src/paperless/.gitconfig:ro
     environment:
       PAPERLESS_REDIS: redis://broker:6379
@@ -61,7 +61,7 @@ services:
       PAPERLESS_DEBUG: true
 
     # Overrides default command so things don't shut down after the process ends.
-    command: /bin/sh -c "chown -R natural-stupidity:natural-stupidity /usr/src/paperless/paperless-ngx/src/documents/static/frontend && chown -R natural-stupidity:natural-stupidity /usr/src/paperless/paperless-ngx/.ruff_cache && while sleep 1000; do :; done"
+    command: /bin/sh -c "chown -R natural-stupidity:natural-stupidity /usr/src/paperless/src/documents/static/frontend && chown -R natural-stupidity:natural-stupidity /usr/src/paperless/.ruff_cache && while sleep 1000; do :; done"
 
   gotenberg:
     image: docker.io/gotenberg/gotenberg:8.17

@@ -182,10 +182,10 @@
 			"detail": "install dependencies from package"
 		},
 		{
-			"description": "Clean install frontend dependencies and build the frontend for production",
+			"description": "Build the frontend for production",
 			"label": "Maintenance: Compile frontend for production",
 			"type": "shell",
-			"command": "npm ci && ./node_modules/.bin/ng build --configuration production",
+			"command": "./node_modules/.bin/ng build --configuration production",
 			"group": "none",
 			"presentation": {
 				"echo": true,

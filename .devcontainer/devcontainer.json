@@ -2,7 +2,7 @@
     "name": "Natural Stupidity",
     "dockerComposeFile": "docker-compose.devcontainer.sqlite-tika.yml",
     "service": "natural-stupidity-dev",
-    "workspaceFolder": "/usr/src/paperless/paperless-ngx",
+    "workspaceFolder": "/usr/src/paperless/",
     "postCreateCommand": "sudo pipenv install --dev && sudo pipenv run pre-commit install && sudo npm install -g @angular/cli && cd ./src-ui/ && sudo npm install && cd ../src/ && sudo pipenv install django whitenoise",
     "customizations": {
         "vscode": {

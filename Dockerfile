@@ -104,12 +104,6 @@ COPY ./docker/rootfs /
 #  - Don't leave anything extra in here
 FROM s6-overlay-base AS main-app
 
-LABEL org.opencontainers.image.authors="paperless-ngx team <hello@paperless-ngx.com>"
-LABEL org.opencontainers.image.documentation="https://docs.paperless-ngx.com/"
-LABEL org.opencontainers.image.source="https://github.com/paperless-ngx/paperless-ngx"
-LABEL org.opencontainers.image.url="https://github.com/paperless-ngx/paperless-ngx"
-LABEL org.opencontainers.image.licenses="GPL-3.0-only"
-
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Buildx provided, must be defined to use though
@@ -182,7 +176,7 @@ RUN set -eux \
     && apt-get update \
     && apt-get install --yes --quiet --no-install-recommends ${RUNTIME_PACKAGES} \
     && echo "Installing pre-built updates" \
-      && curl --fail --silent --no-progress-meter --show-error --location --remote-name-all --parallel --parallel-max 4 \
+      && curl --fail --silent --show-error --location --remote-name-all --parallel --parallel-max 4 \
         https://github.com/paperless-ngx/builder/releases/download/qpdf-${QPDF_VERSION}/libqpdf29_${QPDF_VERSION}-1_${TARGETARCH}.deb \
         https://github.com/paperless-ngx/builder/releases/download/qpdf-${QPDF_VERSION}/qpdf_${QPDF_VERSION}-1_${TARGETARCH}.deb \
         https://github.com/paperless-ngx/builder/releases/download/ghostscript-${GS_VERSION}/libgs10_${GS_VERSION}.dfsg-1_${TARGETARCH}.deb \

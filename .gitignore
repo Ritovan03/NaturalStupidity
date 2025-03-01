@@ -97,3 +97,7 @@ celerybeat-schedule*
 /.devcontainer/data/
 /.devcontainer/media/
 /.devcontainer/redisdata/
+
+/data/
+/consume/
+/media/

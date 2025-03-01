@@ -156,7 +156,7 @@ install_languages() {
 	fi
 }
 
-echo "Paperless-ngx docker container starting..."
+echo "App Docker container starting..."
 
 gosu_cmd=(gosu natural-stupidity)
 if [ "$(id --user)" == "$(id --user natural-stupidity)" ]; then

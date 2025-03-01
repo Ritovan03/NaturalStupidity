@@ -163,18 +163,18 @@ RUN set -eux \
     && echo "natural-stupidity ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
   && echo "Creating volume directories" \
     && mkdir --parents --verbose /usr/src/paperless/data \
-    && mkdir --parents --verbose /usr/src/paperless/paperless-ngx/media \
-    && mkdir --parents --verbose /usr/src/paperless/paperless-ngx/consume \
-    && mkdir --parents --verbose /usr/src/paperless/paperless-ngx/export \
-    && mkdir --parents --verbose /usr/src/paperless/paperless-ngx/.venv \
+    && mkdir --parents --verbose /usr/src/paperless/media \
+    && mkdir --parents --verbose /usr/src/paperless/consume \
+    && mkdir --parents --verbose /usr/src/paperless/export \
+    && mkdir --parents --verbose /usr/src/paperless/.venv \
   && echo "Adjusting all permissions" \
     && chown --from root:root --changes --recursive natural-stupidity:natural-stupidity /usr/src/paperless
 #  && echo "Collecting static files" \
 #    && gosu paperless python3 manage.py collectstatic --clear --no-input --link \
 #    && gosu paperless python3 manage.py compilemessages
 
-VOLUME ["/usr/src/paperless/paperless-ngx/data", \
-        "/usr/src/paperless/paperless-ngx/media", \
-        "/usr/src/paperless/paperless-ngx/consume", \
-        "/usr/src/paperless/paperless-ngx/export", \
-        "/usr/src/paperless/paperless-ngx/.venv"]
+VOLUME ["/usr/src/paperless/data", \
+        "/usr/src/paperless/media", \
+        "/usr/src/paperless/consume", \
+        "/usr/src/paperless/export", \
+        "/usr/src/paperless/.venv"]
