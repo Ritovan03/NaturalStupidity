@@ -18,6 +18,7 @@
   --pngx-primary-darken-15: hsl(var(--pngx-primary), calc(var(--pngx-primary-lightness) - 15%));
   --pngx-primary-darken-18: hsl(var(--pngx-primary), calc(var(--pngx-primary-lightness) - 18%));
   --pngx-primary-darken-27: hsl(var(--pngx-primary), calc(var(--pngx-primary-lightness) - 27%));
+  --pngx-primary-darken-38: hsl(var(--pngx-primary), calc(var(--pngx-primary-lightness) - 38%));
   --pngx-success-darken-10: hsl(152, 69%, 11%); // based on success #198754
   --pngx-bg-alt: #fff;
   --pngx-bg-darker: var(--bs-gray-100);
@@ -34,7 +35,7 @@
 
 // Dark text colors allow for maintain contrast with theme color changes
 $text-color-light-bg: #212529;
-$text-color-dark-bg: #abb2bf;
+$text-color-dark-bg: #fff;
 $text-color-dark-bg-accent: color.adjust($text-color-dark-bg, $lightness: 10%);
 // Taken from bootstrap
 $form-check-input-checked-bg-image-dark: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$text-color-light-bg}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>");
@@ -259,7 +260,7 @@ $form-check-radio-checked-bg-image-dark: url("data:image/svg+xml,<svg xmlns='htt
 
   .alert-primary {
     --bs-alert-color: var(--bs-primary);
-    --bs-alert-bg: var(--pngx-primary-darken-18);
+    --bs-alert-bg: var(--pngx-primary-darken-38);
     --bs-alert-border-color: var(--pngx-bg-darker);
   }
 

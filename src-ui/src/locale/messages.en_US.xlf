@@ -451,20 +451,20 @@
         <target state="needs-translation">Save &amp; next</target>
       </trans-unit>
       <trans-unit id="8765497970646365998" datatype="html">
-        <source>Hello <x id="PH" equiv-text="this.displayName"/>, welcome to Paperless-ngx!</source>
+        <source>Hello <x id="PH" equiv-text="this.displayName"/>, welcome to Natural Stupidity!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.ts</context>
           <context context-type="linenumber">33</context>
         </context-group>
-        <target state="needs-translation">Hello <x id="PH" equiv-text="this.displayName"/>, welcome to Paperless-ngx!</target>
+        <target state="needs-translation">Hello <x id="PH" equiv-text="this.displayName"/>, welcome to Natural Stupidity!</target>
       </trans-unit>
       <trans-unit id="7016571167317583872" datatype="html">
-        <source>Welcome to Paperless-ngx!</source>
+        <source>Welcome to Natural Stupidity!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.ts</context>
           <context context-type="linenumber">35</context>
         </context-group>
-        <target state="needs-translation">Welcome to Paperless-ngx!</target>
+        <target state="needs-translation">Welcome to Natural Stupidity!</target>
       </trans-unit>
       <trans-unit id="f65253954b66e929a8b4d5ecaf61f9129f8cec64" datatype="html">
         <source>Dashboard</source>

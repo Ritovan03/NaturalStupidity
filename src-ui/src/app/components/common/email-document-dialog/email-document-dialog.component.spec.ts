@@ -49,7 +49,7 @@ describe('EmailDocumentDialogComponent', () => {
   it('should support sending document via email, showing error if needed', () => {
     const toastErrorSpy = jest.spyOn(toastService, 'showError')
     const toastSuccessSpy = jest.spyOn(toastService, 'showInfo')
-    component.emailAddress = 'hello@paperless-ngx.com'
+    component.emailAddress = 'hello@natural-stupidity.com'
     component.emailSubject = 'Hello'
     component.emailMessage = 'World'
     jest

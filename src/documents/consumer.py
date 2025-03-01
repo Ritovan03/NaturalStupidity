@@ -380,7 +380,7 @@ class ConsumerPlugin(
 
             # For the actual work, copy the file into a tempdir
             tempdir = tempfile.TemporaryDirectory(
-                prefix="paperless-ngx",
+                prefix="natural-stupidity",
                 dir=settings.SCRATCH_DIR,
             )
             self.working_copy = Path(tempdir.name) / Path(self.filename)

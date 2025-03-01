@@ -359,7 +359,7 @@ it('should call appropriate api endpoint for email document', () => {
   subscription = service
     .emailDocument(
       documents[0].id,
-      'hello@paperless-ngx.com',
+      'hello@natural-stupidity.com',
       'hello',
       'world',
       true

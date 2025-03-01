@@ -14,7 +14,7 @@ export default (
     config.plugins.push(
       codecovWebpackPlugin({
         enableBundleAnalysis: process.env.CODECOV_TOKEN !== undefined,
-        bundleName: 'paperless-ngx',
+        bundleName: 'natural-stupidity',
         uploadToken: process.env.CODECOV_TOKEN,
       })
     )

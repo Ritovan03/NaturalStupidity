@@ -362,8 +362,8 @@ websocket_urlpatterns = [
 ]
 
 # Text in each page's <h1> (and above login form).
-admin.site.site_header = "Naturally Stupid"
+admin.site.site_header = "Natural Stupidity"
 # Text at the end of each page's <title>.
-admin.site.site_title = "Naturally Stupid"
+admin.site.site_title = "Natural Stupidity"
 # Text at the top of the admin index page.
 admin.site.index_title = _("Administration")
