@@ -63,8 +63,6 @@ target/
 .idea
 
 # VS Code
-.vscode
-/src-ui/.vscode
 /docs/.vscode
 .vscode-server
 *CommandMarker
@@ -86,14 +84,7 @@ scripts/nuke
 /static/
 
 # Stored PDFs
-/media/
-/data/
 /paperless.conf
-/consume/
-/export/
-
-# this is where the compiled frontend is moved to.
-/src/documents/static/frontend/
 
 # mac os
 .DS_Store
