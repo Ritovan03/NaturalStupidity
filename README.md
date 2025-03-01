@@ -48,6 +48,3 @@ If you'd like to jump right in, you can configure a **Docker Compose** environme
 
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)"
-
-## Team Natural Stupidity
-- 
