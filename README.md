@@ -30,14 +30,7 @@
   - Supports multiple users working within the same organization  
   - Role-based access control for secure document handling  
   - Real-time collaboration to improve productivity  
-
-- **Cloud-Powered Solution**  
-  - Built on **Azure** for scalability, security, and efficient cloud storage  
-
-## Live Demo  
-Try out **Natural Stupidity** with a live demo:  
-[demo.natural-stupidity.com](https://demo.natural-stupidity.com)  
-> Use **demo / demo** as login credentials. (Note: Demo content resets frequently, do not upload sensitive information.)  
+ 
 
 ## Installation  
 The easiest way to deploy **Natural Stupidity** is **Docker Compose**. The files in the `/docker/compose` directory are configured to pull the image from the **GitHub Container Registry**.  
