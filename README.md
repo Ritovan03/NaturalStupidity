@@ -1,4 +1,4 @@
-<p align="center">
+6<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/paperless-ngx/paperless-ngx/blob/main/resources/logo/web/png/White%20logo%20-%20no%20background.png" width="50%">
     <source media="(prefers-color-scheme: light)" srcset="https://github.com/paperless-ngx/paperless-ngx/raw/main/resources/logo/web/png/Black%20logo%20-%20no%20background.png" width="50%">
@@ -43,4 +43,7 @@ If you'd like to jump right in, you can configure a **Docker Compose** environme
 bash -c "$(curl -L https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)"
 ```
 
-## Team Natural Stupidity
+## A Solution by Team Natural Stupidity
+- Gaurav Gautam
+- Krishna Suryawanshi
+- Ritovan Dasgupta
