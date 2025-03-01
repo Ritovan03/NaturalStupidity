@@ -14,8 +14,8 @@
             "yzhang.markdown-all-in-one"
           ],
           "settings": {
-            "python.defaultInterpreterPath": "/usr/src/paperless/paperless-ngx/.venv/bin/python",
-            "python.pythonPath": "/usr/src/paperless/paperless-ngx/.venv/bin/python",
+            "python.defaultInterpreterPath": "/usr/src/paperless/.venv/bin/python",
+            "python.pythonPath": "/usr/src/paperless/.venv/bin/python",
             "python.terminal.activateEnvInCurrentTerminal": true,
             "editor.formatOnPaste": false,
             "editor.formatOnSave": true,
@@ -24,5 +24,5 @@
           }
         }
       },
-      "remoteUser": "paperless"
+      "remoteUser": "natural-stupidity"
     }

@@ -279,7 +279,7 @@ RUN set -eux \
   && echo "Creating gnupg directory" \
     && mkdir -m700 --verbose /usr/src/paperless/.gnupg \
   && echo "Adjusting all permissions" \
-    && chown --from root:root --changes --recursive paperless:paperless /usr/src/paperless \
+    && chown --from root:root --changes --recursive natural-stupidity:natural-stupidity /usr/src/paperless \
   && echo "Collecting static files" \
     && s6-setuidgid paperless python3 manage.py collectstatic --clear --no-input --link \
     && s6-setuidgid paperless python3 manage.py compilemessages

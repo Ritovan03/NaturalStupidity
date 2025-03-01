@@ -1,6 +1,5 @@
-# Docker Compose file for developing Paperless NGX in VSCode DevContainers.
-# This file contains everything Paperless NGX needs to run.
-# Paperless supports amd64, arm, and arm64 hardware.
+# Docker Compose file for developing in VSCode DevContainers.
+# This file contains everything app needs to run.
 # All compose files of Paperless configure it in the following way:
 #
 # - Paperless is (re)started on system boot if it was running before shutdown.
@@ -31,7 +30,7 @@ services:
 
   # No ports need to be exposed; the VSCode DevContainer plugin manages them.
   natural-stupidity-dev:
-    image: paperless-ngx
+    image: natural-stupidity-dev
     build:
       context: ../    # Dockerfile cannot access files from parent directories if context is not set.
       dockerfile: ./.devcontainer/Dockerfile
@@ -42,7 +41,7 @@ services:
       - tika
     volumes:
       - ..:/usr/src/paperless/paperless-ngx:delegated
-      - ../.devcontainer/vscode:/usr/src/paperless/paperless-ngx/.vscode:delegated # VSCode config files
+      - ../.devcontainer/vscode:/usr/src/paperless/.vscode:delegated # VSCode config files
       - pipenv:/usr/src/paperless/paperless-ngx/.venv
       - /usr/src/paperless/paperless-ngx/src/documents/static/frontend # Static frontend files exist only in container
       - /usr/src/paperless/paperless-ngx/src/.pytest_cache
@@ -62,7 +61,7 @@ services:
       PAPERLESS_DEBUG: true
 
     # Overrides default command so things don't shut down after the process ends.
-    command: /bin/sh -c "chown -R paperless:paperless /usr/src/paperless/paperless-ngx/src/documents/static/frontend && chown -R paperless:paperless /usr/src/paperless/paperless-ngx/.ruff_cache && while sleep 1000; do :; done"
+    command: /bin/sh -c "chown -R natural-stupidity:natural-stupidity /usr/src/paperless/paperless-ngx/src/documents/static/frontend && chown -R natural-stupidity:natural-stupidity /usr/src/paperless/paperless-ngx/.ruff_cache && while sleep 1000; do :; done"
 
   gotenberg:
     image: docker.io/gotenberg/gotenberg:8.17

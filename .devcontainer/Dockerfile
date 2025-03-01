@@ -157,18 +157,18 @@ RUN set -eux \
 # Mount the compiled frontend to expected location
 RUN set -eux \
   && echo "Setting up user/group" \
-    && groupmod --new-name paperless node \
-    && usermod --login paperless --home /usr/src/paperless node \
-    && usermod -s /bin/bash paperless \
-    && echo "paperless ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
+    && groupmod --new-name natural-stupidity node \
+    && usermod --login natural-stupidity --home /usr/src/paperless node \
+    && usermod -s /bin/bash natural-stupidity \
+    && echo "natural-stupidity ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
   && echo "Creating volume directories" \
-    && mkdir --parents --verbose /usr/src/paperless/paperless-ngx/data \
+    && mkdir --parents --verbose /usr/src/paperless/data \
     && mkdir --parents --verbose /usr/src/paperless/paperless-ngx/media \
     && mkdir --parents --verbose /usr/src/paperless/paperless-ngx/consume \
     && mkdir --parents --verbose /usr/src/paperless/paperless-ngx/export \
     && mkdir --parents --verbose /usr/src/paperless/paperless-ngx/.venv \
   && echo "Adjusting all permissions" \
-    && chown --from root:root --changes --recursive paperless:paperless /usr/src/paperless
+    && chown --from root:root --changes --recursive natural-stupidity:natural-stupidity /usr/src/paperless
 #  && echo "Collecting static files" \
 #    && gosu paperless python3 manage.py collectstatic --clear --no-input --link \
 #    && gosu paperless python3 manage.py compilemessages

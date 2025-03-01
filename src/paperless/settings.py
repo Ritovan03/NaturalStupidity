@@ -268,7 +268,7 @@ THUMBNAIL_DIR = MEDIA_ROOT / "documents" / "thumbnails"
 
 DATA_DIR = __get_path("PAPERLESS_DATA_DIR", BASE_DIR.parent / "data")
 
-NLTK_DIR = __get_path("PAPERLESS_NLTK_DIR", "../nltk_data")
+NLTK_DIR = __get_path("PAPERLESS_NLTK_DIR", BASE_DIR.parent / "nltk_data")
 
 # Check deprecated setting first
 EMPTY_TRASH_DIR = os.getenv(

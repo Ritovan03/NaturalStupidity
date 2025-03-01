@@ -4,14 +4,14 @@ set -e
 
 # Source: https://github.com/sameersbn/docker-gitlab/
 map_uidgid() {
-	local -r usermap_original_uid=$(id -u paperless)
-	local -r usermap_original_gid=$(id -g paperless)
+	local -r usermap_original_uid=$(id -u natural-stupidity)
+	local -r usermap_original_gid=$(id -g natural-stupidity)
 	local -r usermap_new_uid=${USERMAP_UID:-$usermap_original_uid}
 	local -r usermap_new_gid=${USERMAP_GID:-${usermap_original_gid:-$usermap_new_uid}}
 	if [[ ${usermap_new_uid} != "${usermap_original_uid}" || ${usermap_new_gid} != "${usermap_original_gid}" ]]; then
-		echo "Mapping UID and GID for paperless:paperless to $usermap_new_uid:$usermap_new_gid"
-		usermod --non-unique --uid "${usermap_new_uid}" paperless
-		groupmod --non-unique --gid "${usermap_new_gid}" paperless
+		echo "Mapping UID and GID for natural-stupidity:natural-stupidity to $usermap_new_uid:$usermap_new_gid"
+		usermod --non-unique --uid "${usermap_new_uid}" natural-stupidity
+		groupmod --non-unique --gid "${usermap_new_gid}" natural-stupidity
 	fi
 }
 
@@ -96,13 +96,13 @@ initialize() {
 
 	set +e
 	echo "Adjusting permissions of paperless files. This may take a while."
-	chown -R paperless:paperless "${tmp_dir}"
+	chown -R natural-stupidity:natural-stupidity "${tmp_dir}"
 	for dir in \
 		"${export_dir}" \
 		"${DATA_DIR}" \
 		"${MEDIA_ROOT_DIR}" \
 		"${CONSUME_DIR}"; do
-		find "${dir}" -not \( -user paperless -and -group paperless \) -exec chown --changes paperless:paperless {} +
+		find "${dir}" -not \( -user natural-stupidity -and -group natural-stupidity \) -exec chown --changes natural-stupidity:natural-stupidity {} +
 	done
 	set -e
 
@@ -158,8 +158,8 @@ install_languages() {
 
 echo "Paperless-ngx docker container starting..."
 
-gosu_cmd=(gosu paperless)
-if [ "$(id --user)" == "$(id --user paperless)" ]; then
+gosu_cmd=(gosu natural-stupidity)
+if [ "$(id --user)" == "$(id --user natural-stupidity)" ]; then
 	gosu_cmd=()
 fi
 

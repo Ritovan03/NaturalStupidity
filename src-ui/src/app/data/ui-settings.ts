@@ -17,7 +17,7 @@ export enum GlobalSearchType {
   TITLE_CONTENT = 'title-content',
 }
 
-export const PAPERLESS_GREEN_HEX = '#17541f'
+export const PAPERLESS_GREEN_HEX = '#1da9eb'
 
 export const SETTINGS_KEYS = {
   LANGUAGE: 'language',
