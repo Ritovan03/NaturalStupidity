@@ -1,4 +1,4 @@
-6<p align="center">
+<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/paperless-ngx/paperless-ngx/blob/main/resources/logo/web/png/White%20logo%20-%20no%20background.png" width="50%">
     <source media="(prefers-color-scheme: light)" srcset="https://github.com/paperless-ngx/paperless-ngx/raw/main/resources/logo/web/png/Black%20logo%20-%20no%20background.png" width="50%">
@@ -10,7 +10,7 @@
 
 # Natural Stupidity  
 
-**Natural Stupidity** is a next-generation document management system that leverages AI and cloud technology to streamline document organization, search, and collaboration.  
+**Natural Stupidity** is a next-generation document management system that leverages AI and cloud technology to streamline document organization, search, and collaboration. Designed for both individuals and organizations, it enables multiple users to access, edit, and collaborate on documents efficiently.  
 
 ## Key Features  
 - **Automated Classification & Tagging**  
@@ -25,6 +25,11 @@
   - Smart search with advanced filters  
   - Version control to track document changes  
   - Collaborative editing for real-time teamwork  
+
+- **Multi-User Collaboration for Organizations**  
+  - Supports multiple users working within the same organization  
+  - Role-based access control for secure document handling  
+  - Real-time collaboration to improve productivity  
 
 - **Cloud-Powered Solution**  
   - Built on **Azure** for scalability, security, and efficient cloud storage  
